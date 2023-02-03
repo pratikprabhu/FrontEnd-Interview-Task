@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <!-- SCRIPTS -->
+    <script src="./script.js"></script>
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JQUERY CDN (for cast) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body onload="skeleton ()">
+    <div class="main">
+      <header>
+        <div class="image-conatiner skeleton">
+          <!-- MAIN IMAGE -->
+          <img
+            class="MAIN-IMAGE"
+            onload="this.style.opacity=1"
+            src=""
+            alt="SacredGames"
+          />
+        </div>
+
+        <nav>
+          <a href="#"><i class="fas fa-arrow-left"></i></a>
+          <a href="#"><i class="fas fa-heart"></i></a>
+        </nav>
+
+        <menu>
+          <a href="#"><i class="fas fa-plus"></i></a>
+          <a href="#"><i class="fas fa-share-alt"></i></a>
+        </menu>
+      </header>
+
+      <section class="movie">
+        <!-- TITLE -->
+        <h1 class="TITLE">Title</h1>
+        <p class="text-gray size_sm">Thriller, Adventure, Horror</p>
+        <!-- RATING -->
+        <div class="ratings">
+          <ul>
+            <li><i class="fas fa-thumbs-up active"></i></li>
+            <li></li>
+            <li><i class="fas fa-thumbs-up active"></i></li>
+            <li></li>
+            <li><i class="fas fa-thumbs-up active"></i></li>
+            <li></li>
+            <li><i class="fas fa-thumbs-up active"></i></li>
+            <li></li>
+            <li><i class="fas fa-thumbs-down"></i></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="container2">
+          <div class="inner">
+            <div class="rating">
+              <h2 class="ratingheading glow">Rating</h2>
+              <span class="rating-num">4.0</span>
+              <div class="rating-stars">
+                <span><i class="active icon-star"></i></span>
+                <span><i class="active icon-star"></i></span>
+                <span><i class="active icon-star"></i></span>
+                <span><i class="active icon-star"></i></span>
+                <span><i class="icon-star"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YEAR, OTT PLATFORM, NO. OF EP? -->
+        <ul class="info">
+          <li>
+            <span class="text-gray">Year</span><span class="bold">2018</span>
+          </li>
+          <li>
+            <span class="text-gray">Language</span
+            ><span class="bold">Hindi</span>
+          </li>
+          <li>
+            <span class="text-gray">OTT Platform</span
+            ><span class="bold PLATFORM"></span>
+          </li>
+        </ul>
+
+        <!-- DESCRIPTION -->
+        <p class="text-gray DESCRIPTION"></p>
+      </section>
+
+      <!-- CHARACTERS -->
+      <section class="screnshots">
+        <h2 style="font-size: 3rem; margin-left: 45vw">
+          C<span style="font-size: 2rem">AST</span>
+        </h2>
+        <div class="container">
+          <!--- SKELETON-->
+          <template id="card-template">
+            <div class="card mb-4 bg-dark" style="width: 60rem">
+              <div class="header">
+                <div class="title" data-title>
+                  <div class="skeleton skeleton-text"></div>
+                  <div class="skeleton skeleton-text"></div>
+                </div>
+              </div>
+              <div data-body>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+          </template>
+          <!--- SKELETON-->
+          <div class="CHARACTERS row">
+            <!-- CAST CARDS HERE -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

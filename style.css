@@ -1,0 +1,347 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: rgb(237, 239, 241);
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(34, 16, 16);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(219, 16, 56);
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(223, 7, 7);
+}
+/* SCROLLBAR END */
+
+body {
+  background: rgb(29, 27, 27);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.main {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  position: relative;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.MAIN-IMAGE {
+  object-fit: cover;
+  transition: 1s ease;
+}
+nav {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem;
+}
+.fa-arrow-left,
+.fa-heart {
+  transition: 0.2s ease;
+}
+.fa-arrow-left:hover {
+  /* color: black; */
+  font-size: 1.25rem;
+}
+.fa-heart:hover {
+  color: red;
+  font-size: 1.25rem;
+}
+nav img {
+  height: 1.5rem;
+}
+.image-conatiner {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+  clip-path: ellipse(120% 100% at 50% 0%);
+  transition: opacity 0.5s ease;
+}
+.MAIN-IMAGE:hover {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%) !important;
+  opacity: 0.9 !important;
+}
+.image-conatiner > img {
+  width: 100vw;
+  height: 75vh;
+  object-fit: cover;
+  clip-path: ellipse(120% 100% at 50% 0%);
+  box-shadow: 0px 7px 19px 9px rgba(0, 0, 0, 0.28);
+}
+.image-conatiner::after {
+  content: "" !important;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%) !important;
+  opacity: 0.7 !important;
+}
+menu {
+  display: flex;
+  justify-content: space-between;
+}
+menu {
+  height: 3rem;
+  transform: translateY(-50%);
+  padding: 0 1.5rem;
+  color: #222;
+  align-items: flex-end;
+}
+
+.play-btn {
+  background: #fff;
+  color: #df3e54;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px 7px rgba(20, 20, 20, 0.5);
+  transition: 0.2s ease;
+}
+.play-btn:hover {
+  font-size: 1.25rem;
+  color: red;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+.movie {
+  text-align: center;
+}
+li span {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.info {
+  margin: 1rem auto;
+  text-align: center;
+}
+.info li + li {
+  margin-left: 2rem;
+}
+.fa-plus,
+.fa-share-alt {
+  transition: 0.3s ease;
+}
+.fa-plus:hover,
+.fa-share-alt:hover {
+  font-size: 1.25rem;
+  color: rgb(162, 250, 221);
+}
+section .screnshots {
+  margin-top: 2rem;
+}
+
+.screnshots li + li {
+  margin-left: 1rem;
+}
+section + section {
+  margin-top: 1rem;
+}
+.text-gray {
+  color: #888 !important;
+}
+.bold {
+  font-weight: bolder !important;
+}
+.size_sm {
+  font-size: 0.8rem;
+}
+.DESCRIPTION {
+  line-height: 1.5rem;
+  padding: 1rem;
+  word-spacing: 2px;
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.active {
+  color: #df3e54;
+}
+
+.ratings li {
+  padding: 0 0.1rem;
+}
+.ratings,
+h1,
+p {
+  margin-top: 0.5rem;
+}
+.screnshots h2 {
+  margin-left: 1rem;
+}
+.CHARACTERS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.2rem;
+}
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+.skeleton-text {
+  width: 100%;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.125rem;
+}
+
+.skeleton-text:last-child {
+  margin-bottom: 0;
+  width: 80%;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(205, 9%, 75%);
+  }
+}
+.card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(17.5px);
+  -webkit-backdrop-filter: blur(17.5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: box-shadow 0.5s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 16px 0 #551c22;
+}
+.card-body {
+  padding-left: 5vw;
+  padding-top: 7vh;
+}
+
+.container2 {
+  width: 50vw;
+  min-width: 275px;
+  margin: 0 auto;
+  margin-top: 3em;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  background: #222235;
+}
+
+.inner {
+  padding: 1em;
+  background-color: #111116;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.active.icon-star {
+  color: gold !important;
+}
+.rating {
+  /* float: left; */
+  width: 45%;
+  margin-right: 5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+.ratingheading {
+  text-transform: uppercase;
+  color: aliceblue;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+.rating-num {
+  color: #ccb7b7;
+  font-size: 72px;
+  font-weight: 100;
+  line-height: 1em;
+}
+@media (max-width: 400px) {
+  .rating-num {
+    font-size: 2.5rem;
+  }
+  .ratingheading {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 625px) {
+  .rating-num {
+    font-size: 2rem;
+  }
+  .ratingheading {
+    font-size: 1rem;
+    letter-spacing: default;
+  }
+}
+.rating-stars {
+  font-size: 20px;
+  color: #e3e3e3;
+  margin-bottom: 0.5em;
+}
+.rating-stars .active {
+  color: #737373;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate !important;
+  -moz-animation: glow 1s ease-in-out infinite alternate !important;
+  animation: glow 1s ease-in-out infinite alternate !important;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #e60073,
+      0 0 45px #e60073, 0 0 55px #e60073, 0 0 65px #e60073, 0 0 75px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 25px #fff, 0 0 35px #ff4da6, 0 0 45px #ff4da6,
+      0 0 55px #ff4da6, 0 0 65px #ff4da6, 0 0 75px #ff4da6, 0 0 85px #ff4da6;
+  }
+}
